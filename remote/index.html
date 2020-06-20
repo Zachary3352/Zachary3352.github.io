@@ -1,11 +1,24 @@
-<html>
-<body>
-<a href="https://download.teamviewer.com/download/TeamViewerQS.exe">Download for Windows PC</a>
-<br/>
-<br/>
-<a href="https://download.teamviewer.com/download/TeamViewerQS.dmg">Download for Macintosh</a>
-<br/>
-<br/>
-<a href="https://download.teamviewer.com/download/version_11x/teamviewer_qs.tar.gz">Download for Debian Linux-Based PC</a>
-</body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Download Teamviewer Quicksupport</title>
+    <link rel="shortcut icon" href="logo.ico">
+  </head>
+  <body>
+    <label for="download">Download Quicksupport for:</label>
+    <select name="opsys" id="opsys">
+      <option value="">Select OS</option>
+      <optgroup label="Desktop">
+        <option value="https://download.teamviewer.com/download/TeamViewerQS.exe">Windows PC</option>
+        <option value="https://download.teamviewer.com/download/TeamViewerQS.dmg">Macintosh</option>
+        <option value="https://download.teamviewer.com/download/version_11x/teamviewer_qs.tar.gz">Debian-Based Linux PC</option>
+      </optgroup>
+      <optgroup label="Mobile">
+        <option value="https://play.google.com/store/apps/details?id=com.teamviewer.quicksupport.market">Android Phone/Tablet</option>
+        <option value="https://apps.apple.com/us/app/teamviewer-quicksupport/id661649585">iPhone/iPad</option>
+      </optgroup>
+    </select>
+    <button type="button" onclick="window.open(opsys.value);">Download</button>
+  </body>
 </html>
