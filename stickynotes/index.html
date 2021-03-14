@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sticky Note Mural Generator</title>
+    <link rel="shortcut icon" href="favicon.png">
+  </head>
+  <body>
+
+    <input type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event, imageCanvas, stickyNoteCanvas);">
+    <br />
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <br />
+    <input type="range" min="1" max="50" value="2" class="slider" id="notesWidthSet" style = "width: 60vw;" oninput="createColorGrid(imageCanvas, stickyNoteCanvas, slider);"> <!-- Using onchange instead of oninput so we don't calculate this every time the slider drags past a number -->
+    <br />
+    <canvas id="canvas2" width="300" height="300"></canvas>
+
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
