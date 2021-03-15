@@ -8,7 +8,7 @@ var inputCanvasCtx = imageCanvas.getContext("2d");
 var outputCanvasCtx = stickyNoteCanvas.getContext("2d");
 
 var img = new Image();
-img.src = 'defaultImage.jpg';
+img.src = 'defaultimage.jpg';
 
 img.addEventListener('load', function() {
   imageCanvas.width = img.width;
