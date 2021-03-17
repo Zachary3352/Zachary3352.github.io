@@ -20,6 +20,27 @@ img.addEventListener('load', function() {
 }, false);
 
 
+var nearestNeighbor = function(inputColor, colorList) {
+  var euclideanDistances = [];
+  for (color=0; color < colorList.length; color++) {
+    //if (inputColor[3]<255) {
+    //  euclideanDistances[color] = colorList[0];
+    //} else {
+      euclideanDistances[color] = Math.sqrt((colorList[color][0]-inputColor[0])**2+(colorList[color][1]-inputColor[1])**2+(colorList[color][2]-inputColor[2])**2);
+    //};
+  };
+  return colorList[indexOfSmallest(euclideanDistances)];
+};
+
+// From https://devblogs.microsoft.com/oldnewthing/20140526-00/?p=903
+var indexOfSmallest = function(array) {
+ var lowest = 0;
+ for (var i = 1; i < array.length; i++) {
+  if (array[i] < array[lowest]) lowest = i;
+ }
+ return lowest;
+}
+
 var loadFile = function(event, inputCanvas, outputCanvas) {
   var inputCanvasCtx = inputCanvas.getContext("2d");
 
@@ -52,6 +73,35 @@ var createColorGrid = function(inputCanvas, outputCanvas, slider) {
     notesHeight++;
     remainder = 0;
   };
+
+  var colorList = [
+  [255,255,255, "White"],
+  [0,0,0, "Black"],
+  [239,224,223, "Pale Pink"],
+  [249,169,197, "Light Pink"],
+  [240,85,147, "Hot Pink"],
+  [244,110,152, "Pink"],
+  [185,78,137, "Pomegranate"],
+  [221,221,221, "Pale Grey"],
+  [188,187,203, "Periwinkle"],
+  [183,215,230, "Baby Blue"],
+  [74,164,216, "Dark Blue"],
+  [205,219,214, "Olive Grey"],
+  [85,199,219, "Sky Blue"],
+  [0,172,229, "Blue"],
+  [215,224,223, "Grey"],
+  [71,196,200, "Turquoise"],
+  [0,152,152, "Ocean"],
+  [154,205,67, "Green"],
+  [208,213,52, "Mustard"],
+  [204,223,61, "Lime"],
+  [224,216,127, "Canary Yellow"],
+  [232,198,47, "Yellow"],
+  [253,155,44, "Orange"],
+  [239,158,104, "Salmon"],
+  [241,57,54, "Scarlet"],
+  [187,36,40, "Deep Red"]
+  ];
   //console.log(img.height, pixelsPerNote);
   //console.log("notesHeight: ",notesHeight, "Remainder: ",remainder);
 
@@ -69,12 +119,23 @@ var createColorGrid = function(inputCanvas, outputCanvas, slider) {
   for(verticalNote = 0; verticalNote < notesHeight; verticalNote++) {
     for(horizontalNote = 0; horizontalNote < notesWidth; horizontalNote++) {
       data = inputCanvasCtx.getImageData(pixelsPerNote*horizontalNote,pixelsPerNote*verticalNote+Math.round(remainder/2),pixelsPerNote,pixelsPerNote).data;
+      //console.log(data);
       avgColor = averageColor(data);
 
-      outputCanvasCtx.fillStyle = 'rgba('+avgColor[0]+','+avgColor[1]+','+avgColor[2]+','+avgColor[3]+')';
+      noteColor = nearestNeighbor(avgColor, colorList);
+
+      outputCanvasCtx.fillStyle = 'rgba('+noteColor[0]+','+noteColor[1]+','+noteColor[2]+')';
       outputCanvasCtx.fillRect(pixelsPerNote*horizontalNote,pixelsPerNote*verticalNote,(14/15)*pixelsPerNote,(14/15)*pixelsPerNote);
     };
   };
+
+  //Outlines on the input canvas, for debugging
+  /*for(verticalNote = 0; verticalNote < notesHeight; verticalNote++) {
+    for(horizontalNote = 0; horizontalNote < notesWidth; horizontalNote++) {
+      inputCanvasCtx.strokeStyle = 'black';
+      inputCanvasCtx.strokeRect(pixelsPerNote*horizontalNote,pixelsPerNote*verticalNote,(14/15)*pixelsPerNote,(14/15)*pixelsPerNote);
+    };
+  };*/
 };
 
 var averageColor = function(data) {
