@@ -1,0 +1,151 @@
+/*
+ * demoserver.css as modified to avoid mucking up bootstrap defaults.
+ * A work in progress, to say the least...
+ */
+
+input[type="text"] {
+    margin: 0;
+}
+
+input[type="submit"] {
+  height: 30px;
+  line-height: 30px;
+}
+
+button#user-account-btn {
+  height: auto;
+}
+
+form {
+    margin:0;
+}
+
+tr.odd {
+  background-color: lightgray;
+}
+
+.upload-dragdrop {
+  width: 20em;
+  height: 4em;
+  border: black solid 1px;
+  background-color: lightgreen;
+  text-align: center;
+  line-height: 4em;
+}
+
+.dragging {
+  background-color: lightpink;
+}
+
+.progressbar {
+  height: 0.5em;
+  width: 5em;
+  border: black solid 1px;
+  display: inline-block;
+  margin-left: 1em;
+}
+
+ul {
+  margin-left:0;
+  padding-left:0;
+}
+
+li {
+  margin-left:0;
+  list-style:none;
+}
+
+.last-changed {
+  margin-right: 10em;
+  float: right;
+}
+
+.debug-link {
+    margin-left: 1em;
+    float: left;
+}
+
+.header_user {
+    text-align: right;
+    float: right;
+    margin-right: 1em;
+}
+
+.clear {
+    height:0;
+    clear:both;
+}
+
+.nav-sketchplane:before {
+    display: inline-block;
+    content: "";
+    width:1em;
+}
+
+.nav-sketchplane.selected:before {
+    display: inline-block;
+    content: "✓";
+    width:1em;
+}
+
+.modal-body #newName {
+    width: 300px;
+}
+
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+    margin-left: 15px;
+    width: auto;
+}
+
+/* need to override boostrap, which makes labels block */
+.control-label {
+    display: inline-block;
+  font-weight: 600;
+}
+
+/*text input is not aligned with other controls when used in control-group */
+.control-group input[type="text"] {
+  margin-bottom:10px;
+}
+
+img.usermenu-avatar {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.nav > li .brand-name, .nav > li .brand-name-no-chevron {
+  color: rgb(51, 51, 51);
+}
+
+.nav > li .brand-name-no-chevron{
+  font-size: 20px;
+  font-weight: 200;
+  display: block;
+}
+
+.nav > li > a > span.brand-name-no-chevron{
+  padding-left: 22px;
+}
+
+.nav > li > span.brand-name-no-chevron {
+  padding-left: 17px;
+  padding-top: 10px;
+}
+
+.dropdown-username-nav-right {
+  max-width: 80px;
+}
+
+.dropdown-username-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 70px;
+  display: -moz-box;  /*this is really a hack to make Firefox work too*/
+}
+
+#shareSubmit.btn {
+  margin-bottom: 10px;
+}

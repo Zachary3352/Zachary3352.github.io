@@ -1,0 +1,268 @@
+
+/* font definitions for sketch fonts */
+
+@font-face {
+    font-family: 'AllertaStencil';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/AllertaStencil-Regular.ttf);
+}
+
+/* Arimo */
+@font-face {
+    font-family: 'Arimo';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/Arimo-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Arimo';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/fonts/Arimo-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Arimo';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/Arimo-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Arimo';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/fonts/Arimo-BoldItalic.ttf);
+}
+
+/* DroidSansMono */
+@font-face {
+    font-family: 'DroidSansMono';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/DroidSansMono.ttf);
+}
+
+/* NotoSans */
+@font-face {
+    font-family: 'NotoSans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/fonts/NotoSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/fonts/NotoSans-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/NotoSans-Bold.ttf);
+}
+
+/* NotoSerif */
+@font-face {
+    font-family: 'NotoSerif';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/NotoSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'NotoSerif';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/fonts/NotoSerif-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'NotoSerif';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/fonts/NotoSerif-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'NotoSerif';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/NotoSerif-Bold.ttf);
+}
+
+/* NotoSans-Chinese-Simplified */
+@font-face {
+    font-family: 'NotoSansCJKsc';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/NotoSansCJKsc-Regular.otf);
+}
+
+@font-face {
+    font-family: 'NotoSansCJKsc';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/NotoSansCJKsc-Bold.otf);
+}
+
+/* NotoSans-Chinese-Traditional */
+@font-face {
+    font-family: 'NotoSansCJKtc';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/NotoSansCJKtc-Regular.otf);
+}
+
+@font-face {
+    font-family: 'NotoSansCJKtc';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/NotoSansCJKtc-Bold.otf);
+}
+
+/* NotoSans-Japanese */
+@font-face {
+    font-family: 'NotoSansCJKjp';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/NotoSansCJKjp-Regular.otf);
+}
+
+@font-face {
+    font-family: 'NotoSansCJKjp';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/NotoSansCJKjp-Bold.otf);
+}
+
+/* NotoSans-Korean */
+@font-face {
+    font-family: 'NotoSansCJKkr';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/NotoSansCJKkr-Regular.otf);
+}
+
+@font-face {
+    font-family: 'NotoSansCJKkr';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/NotoSansCJKkr-Bold.otf);
+}
+
+/* OpenSans */
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/fonts/OpenSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/fonts/OpenSans-BoldItalic.ttf);
+}
+
+/* PT_Sans-Web */
+@font-face {
+    font-family: 'PT_Sans-Web';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/PT_Sans-Web-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'PT_Sans-Web';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/fonts/PT_Sans-Web-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'PT_Sans-Web';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/PT_Sans-Web-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'PT_Sans-Web';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/fonts/PT_Sans-Web-BoldItalic.ttf);
+}
+
+/* RobotoSlab */
+@font-face {
+    font-family: 'RobotoSlab';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/RobotoSlab-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'RobotoSlab';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/RobotoSlab-Bold.ttf);
+}
+
+/* Tinos */
+@font-face {
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/Tinos-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Tinos';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/fonts/Tinos-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/Tinos-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Tinos';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/fonts/Tinos-BoldItalic.ttf);
+}
+
+
