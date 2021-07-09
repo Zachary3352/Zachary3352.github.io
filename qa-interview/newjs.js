@@ -13,7 +13,7 @@ checkboxContainer.onclick = function() {
   }
 }
 
-// Link document checkbox disables export checkboxes
+// Individuals tab: Link document checkbox disables export checkboxes
 linkCheckbox = document.querySelectorAll('[data-permission="LINK"]')[0];
 exportCheckbox = document.querySelectorAll('[data-permission="EXPORT"]')[0];
 exportText = exportCheckbox.parentElement;
@@ -30,7 +30,24 @@ linkCheckbox.onclick = function() {
   }
 }
 
-// Hide "Can view" notice and disable Share checkbox
+// Teams tab: Link document checkbox disables export checkboxes
+teamsLinkCheckbox = document.querySelectorAll('[data-permission="LINK"]')[1];
+teamsExportCheckbox = document.querySelectorAll('[data-permission="EXPORT"]')[1];
+teamsExportText = teamsExportCheckbox.parentElement;
+
+teamsLinkCheckbox.onclick = function() {
+  if (teamsLinkCheckbox.checked) {
+    teamsExportCheckbox.checked = true;
+    teamsExportCheckbox.disabled = true;
+    teamsExportText.style = "color: #a0abb4;";
+  } else {
+    teamsExportCheckbox.checked = false;
+    teamsExportCheckbox.disabled = false;
+    teamsExportText.style = "color: #333333;";
+  }
+}
+
+// Individuals tab: Hide "Can view" notice and disable Share checkbox
 notice = document.getElementsByClassName('section-row viewer-help-message')[0];
 dropdown = document.getElementsByClassName('os-permission form-control ng-valid ng-not-empty ng-dirty ng-touched')[0];
 shareCheckbox = document.querySelectorAll('[data-permission="RESHARE"]')[0];
@@ -45,6 +62,25 @@ dropdown.onclick = function() {
     notice.style.display = "flex";
     shareCheckbox.disabled = true;
     shareText.style = "color: #a0abb4;";
+  }
+}
+
+// Teams tab: Hide "Can view" notice and disable Share checkbox
+teamsNotice = document.getElementsByClassName('section-row viewer-help-message')[1];
+// NEXT LINE ISN'T WORKING
+teamsDropdown = document.getElementsByClassName('os-permission form-control ng-valid ng-not-empty ng-dirty ng-touched')[1];
+teamsShareCheckbox = document.querySelectorAll('[data-permission="RESHARE"]')[1];
+teamsShareText = teamsShareCheckbox.parentElement;
+
+teamsDropdown.onclick = function() {
+  if (teamsDropdown.value == "WRITE") {
+    teamsNotice.style.display = "none";
+    teamsShareCheckbox.disabled = false;
+    teamsShareText.style = "color: #333333;";
+  } else {
+    teamsNotice.style.display = "flex";
+    teamsShareCheckbox.disabled = true;
+    teamsShareText.style = "color: #a0abb4;";
   }
 }
 
