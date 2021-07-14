@@ -29795,7 +29795,7 @@ select[multiple] {
   -moz-user-select: none;
   user-select: none;
   width: 150px;
-  margin-right: 5px
+  margin-right: 1px
 }
 
 .share-dialog select.shareWithOrganization {
@@ -29999,7 +29999,7 @@ div.modal.share-dialog .modal-body {
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
-  border-radius: 0 5px 5px 5px;
+  border-radius: 8px;
   padding: 25px 15px;
   vertical-align: middle
 }
@@ -34647,4 +34647,25 @@ Build date: 2014-01-10
   height: 100%;
   width: 100%;
   overflow: hidden
+}
+
+.personal-message-check {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #EA3130;
+}
+
+.personal-message-check p {
+  display: inline-block;
+  padding-left: 6px;
+  padding-bottom: 6px;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.personal-message-check input {
+  vertical-align: bottom !important;
+  margin-bottom: 5px;
+  margin-left: 5px;
 }
