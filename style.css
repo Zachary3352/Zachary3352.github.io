@@ -36,7 +36,7 @@ svg {
   height: 100vh;
   right: 3%;
   box-sizing: border-box;
-  box-shadow: inset -6vw 0 3vw 0vw;
+  box-shadow: inset -9vw 0 3vw -3vw;
 }
 
 .hero-content{
